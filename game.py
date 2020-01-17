@@ -1,5 +1,5 @@
 import pygame
-from random import *
+import random
 
 def main():
     width, height = 500, 500
@@ -16,8 +16,8 @@ def main():
     body.append((hx, hy))
 
     while True:
-        ax = randint(1, gw)
-        ay = randint(1, gh)
+        ax = random.randint(1, gw)
+        ay = random.randint(1, gh)
         if not ((ax,ay) in body):
             break
 
@@ -72,8 +72,8 @@ def main():
             body.insert(0, head)
             if ax == head[0] and ay == head[1]:
                  while True:
-                    ax = randint(1, gw)
-                    ay = randint(1, gh)
+                    ax = random.randint(1, gw)
+                    ay = random.randint(1, gh)
                     if not ((ax,ay) in body):
                         break
             else:
